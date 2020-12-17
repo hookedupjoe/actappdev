@@ -30,11 +30,7 @@
 
 	$ret .= ActAppTpl::get_menu_nav_for_loc('menu-1');
 
-	$ret .= '<div class="right menu inverted">
-    <div action="toggleNav" class="ui item">
-		<i class="user icon ui link"></i> Login
-		</div>
-	</div>';
+	$ret .= '<div class="right menu inverted">'.ActAppTpl::get_login_link().'</div>';
 
 	echo $ret;
 

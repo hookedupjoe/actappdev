@@ -1,15 +1,22 @@
 <?php
-/**
- * ActAppDev functions and definitions
- *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
+/*!
+ * Theme Name: ActAppDev
+ * Theme URI: https://hookedup.com/
+ * Author: Joseph Francis
+ * Author URI: https://hookedup.com/
+ * Description: Theme that includes the Action Application Library by Joseph Francis
+ * 
+ * License: GNU General Public License v2 or later
+ * License URI: LICENSE
+ * Text Domain: ActAppDev
+ * Tags: developer-library
  *
  * @package ActAppDev
  */
 
 if ( ! defined( 'ACTAPPDEV_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'ACTAPPDEV_VERSION', '1.0.2' );
+	define( 'ACTAPPDEV_VERSION', '1.0.5' );
 }
 
 if ( ! function_exists( 'actappdev_setup' ) ) :
@@ -207,7 +214,7 @@ if ( class_exists( 'WooCommerce' ) ) {
 /**
  * Standard disable of stuff we don't want in the admin area
  */
-function remove_dashboard_meta() {
+function actappdev_remove_dashboard_meta() {
     remove_meta_box('dashboard_incoming_links', 'dashboard', 'normal'); //Removes the 'incoming links' widget
     remove_meta_box('dashboard_primary', 'dashboard', 'normal'); //Removes the 'WordPress News' widget
     remove_meta_box('dashboard_secondary', 'dashboard', 'normal'); //Removes the secondary widget
@@ -217,13 +224,13 @@ function remove_dashboard_meta() {
     remove_meta_box('dashboard_right_now', 'dashboard', 'normal'); //Removes the 'At a Glance' widget
     remove_meta_box('dashboard_activity', 'dashboard', 'normal'); //Removes the 'Activity' widget (since 3.8)
 }
-add_action('admin_init', 'remove_dashboard_meta');
+add_action('admin_init', 'actappdev_remove_dashboard_meta');
 
 
-function remove_admin_bar() {
+function actappdev_remove_admin_bar() {
 	if (!current_user_can('administrator') && !is_admin()) {
 		show_admin_bar(false);
 	}
 }
-add_action('after_setup_theme', 'remove_admin_bar');
+add_action('after_setup_theme', 'actappdev_remove_admin_bar');
 

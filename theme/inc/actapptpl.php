@@ -14,6 +14,16 @@ class ActAppTpl {
 		return self::$instance;
 	}
 
+	public static function get_login_link(){
+		$ret = '';
+		if (!is_user_logged_in()) {
+			$ret .= '<a class="ui item" href="' . wp_login_url($_SERVER["REQUEST_URI"]) . '"><i class="icon user"></i> Login</a>';
+		} else {
+			$ret .= '<a class="ui item" href="' . wp_logout_url($_SERVER["REQUEST_URI"]) . '"><i class="icon user"></i> Logout</a>';
+		}
+		return $ret;
+	}
+	
 	public static function get_mobile_nav_subs($key, $title, $tree){
 		
 		$ret = '<div appuse="cards" group="navtabs" item="menu-'.$key.'" class="hidden">
