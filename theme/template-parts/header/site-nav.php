@@ -2,8 +2,7 @@
 /**
  * Displays the site navigation.
  *
- * @package WordPress
- * @subpackage Twenty_Twenty_One
+ * @package ActAppDev
  * @since 1.0.0
  */
 

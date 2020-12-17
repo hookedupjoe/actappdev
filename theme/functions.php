@@ -16,7 +16,7 @@
 
 if ( ! defined( 'ACTAPPDEV_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'ACTAPPDEV_VERSION', '1.0.5' );
+	define( 'ACTAPPDEV_VERSION', '1.0.6' );
 }
 
 if ( ! function_exists( 'actappdev_setup' ) ) :
@@ -152,6 +152,19 @@ function actappdev_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Header', '_actappdev' ),
+			'id'            => 'sidebar-h',
+			'description'   => esc_html__( 'Add widgets here to appear as your header.', '_actappdev' ),
+			'before_widget' => '',
+			'after_widget'  => '',
+			'before_title'  => '',
+			'after_title'   => '',
+		)
+	);
+
 }
 add_action( 'widgets_init', 'actappdev_widgets_init' );
 
