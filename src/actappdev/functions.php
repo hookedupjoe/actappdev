@@ -16,7 +16,7 @@
 
 if ( ! defined( 'ACTAPPDEV_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'ACTAPPDEV_VERSION', '1.0.6' );
+	define( 'ACTAPPDEV_VERSION', '1.0.7' );
 }
 
 if ( ! function_exists( 'actappdev_setup' ) ) :
