@@ -7,7 +7,7 @@ Author: Joseph Francis
 Author URI: https://hookedup.com/
 Description: Theme that includes the Action Application Library by Joseph Francis
 
-Version: 1.0.7
+Version: 1.0.8
 
 Tested up to: 5.6
 Requires PHP: 5.6
@@ -72,4 +72,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 .ui.cards.sidecards div.image>img {
   min-height:75px;
+}
+body.admin-bar .ui.top.fixed.menu {
+  margin-top: 30px;
+}
+body.admin-bar .ui.top.fixed.menu {
+  margin-top: 32px;
+}
+body.admin-bar.kodeo-ui-active .ui.top.fixed.menu {
+  margin-top: 42px;
 }

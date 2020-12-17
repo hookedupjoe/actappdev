@@ -16,7 +16,16 @@
 
 if ( ! defined( 'ACTAPPDEV_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'ACTAPPDEV_VERSION', '1.0.7' );
+	define( 'ACTAPPDEV_VERSION', '1.0.8' );
+}
+
+add_filter( 'body_class','actapp_body_classes' );
+function actapp_body_classes( $classes ) {
+	
+	if( class_exists('Kodeo_Admin_UI') ){
+		$classes[] = 'kodeo-ui-active';
+	}
+    return $classes;
 }
 
 if ( ! function_exists( 'actappdev_setup' ) ) :
